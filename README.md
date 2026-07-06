@@ -10,7 +10,7 @@ After passing your Github username to a member of the Salt team, and confirming 
 3. Add this to `.npmrc` in your project route:
 ```
  @kagamidigital:registry=https://npm.pkg.github.com
-  //npm.pkg.github.com/:_authToken=THEIR_CLASSIC_PAT
+  //npm.pkg.github.com/:_authToken=YOUR_CLASSIC_PAT
 ```
 4. `npm install @kagamidigital/salt-sdk-mirror`
 
