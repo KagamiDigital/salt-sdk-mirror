@@ -15,4 +15,4 @@ After passing your Github username to a member of the Salt team, and confirming 
 4. `npm install @kagamidigital/salt-sdk-mirror`
 
 # Documentation
-Link forthcoming
+https://kagamidigital.github.io/salt-sdk-mirror/
