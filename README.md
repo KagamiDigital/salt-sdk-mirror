@@ -16,3 +16,8 @@ After passing your Github username to a member of the Salt team, and confirming 
 
 # Documentation
 https://kagamidigital.github.io/salt-sdk-mirror/
+
+# Beta Status
+Salt is in Beta. By using Salt, you acknowledge that you understand the software's Beta status and will not hold the Salt team, platform, builders or affiliates responsible for any losses incurred.
+
+You also acknowledge that you have read and understood the [Terms of Use](https://salt.space/terms/app/).
