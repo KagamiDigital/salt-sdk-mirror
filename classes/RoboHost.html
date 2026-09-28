@@ -1,0 +1,272 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>RoboHost | salt-sdk</title><meta name="description" content="Documentation for salt-sdk"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">salt-sdk</a>
+<div id="tsd-toolbar-links"><a href="../documents/Getting_Started.html">Getting started</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
+<ul role="listbox" id="tsd-search-results"></ul>
+<div id="tsd-search-status" aria-live="polite" aria-atomic="true">
+<div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb" aria-label="Breadcrumb">
+<li><a href="" aria-current="page">RoboHost</a></li></ul>
+<h1>Class RoboHost<code class="tsd-tag">Sealed</code></h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>A RoboHost represents the server-side record for an organisation's robos.
+It provides the credentials and hosting parameters needed to provision the
+actual compute instances (via setup script or AWS CloudFormation) that will
+connect and act as robo signers: Use <a href="#listentosetup" class="tsd-kind-method">listenToSetup</a> for progress updates,
+<a href="#waituntilonline" class="tsd-kind-method">waitUntilOnline</a> for the readiness signal, then <a href="#activate" class="tsd-kind-method">activate</a> your robos.</p>
+</div></section>
+<section class="tsd-panel-group tsd-index-group">
+<section class="tsd-panel tsd-index-panel">
+<details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h5 class="tsd-index-heading uppercase">Index</h5></summary>
+<div class="tsd-accordion-details">
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="properties">Properties<a href="#properties" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#active" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>active</span></a>
+<a href="#id" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>id</span></a>
+<a href="#name" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>name</span></a>
+<a href="#organisationid" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>organisation<wbr/>Id</span></a>
+<a href="#otp" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>otp</span></a>
+<a href="#owneraddress" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>owner<wbr/>Address</span></a>
+<a href="#signers" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>signers</span></a>
+<a href="#version" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>version</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="methods">Methods<a href="#methods" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#activate" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>activate</span></a>
+<a href="#generatecloudformationurl" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>generate<wbr/>Cloud<wbr/>Formation<wbr/>Url</span></a>
+<a href="#generatesetupscript" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>generate<wbr/>Setup<wbr/>Script</span></a>
+<a href="#listentosetup" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>listen<wbr/>To<wbr/>Setup</span></a>
+<a href="#waituntilonline" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wait<wbr/>Until<wbr/>Online</span></a>
+</div></section></div></details></section></section>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="properties-1">Properties<a href="#properties-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="active"><code class="tsd-tag">Readonly</code><span>active</span><a href="#active" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">active</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>Whether this host has completed 2FA activation, as of when this record was
+fetched. Activate via <a href="#activate" class="tsd-kind-method">activate</a>.</p>
+</div></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="id"><code class="tsd-tag">Readonly</code><span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>The robo ID</p>
+</div></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="name"><code class="tsd-tag">Readonly</code><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span></div>
+<div class="tsd-comment tsd-typography"><p>The robo name</p>
+</div></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="organisationid"><code class="tsd-tag">Readonly</code><span>organisation<wbr/>Id</span><a href="#organisationid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">organisationId</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>The ID of the organisation these robos belong to</p>
+</div></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="otp"><code class="tsd-tag">Readonly</code><span>otp</span><a href="#otp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">otp</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span></div>
+<div class="tsd-comment tsd-typography"><p>The setup OTP shown during robo-guardian setup, or <code>null</code> once activation
+has consumed it. Used to provision the host (<a href="#generatesetupscript" class="tsd-kind-method">generateSetupScript</a> /
+<a href="#generatecloudformationurl" class="tsd-kind-method">generateCloudFormationUrl</a>) and to activate it (<a href="#activate" class="tsd-kind-method">activate</a>).</p>
+</div></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="owneraddress"><code class="tsd-tag">Readonly</code><span>owner<wbr/>Address</span><a href="#owneraddress" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">ownerAddress</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span></div>
+<div class="tsd-comment tsd-typography"><p>The owner's address</p>
+</div></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="signers"><code class="tsd-tag">Readonly</code><span>signers</span><a href="#signers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">signers</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>The robo signers' addresses (empty until the host is provisioned)</p>
+</div></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="version"><code class="tsd-tag">Readonly</code><span>version</span><a href="#version" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">version</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span></div>
+<div class="tsd-comment tsd-typography"><p>The salt-sdk version this host reported on its last boot, or
+<code>null</code> if it has never reported one.</p>
+<p><code>null</code> on a host that has registered its <a href="#signers" class="tsd-kind-property">signers</a> means it last
+booted on a build that predates version reporting.</p>
+</div></section></section></details>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="methods-1">Methods<a href="#methods-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="activate"><span>activate</span><a href="#activate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="activate-1"><span class="tsd-kind-call-signature">activate</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">walletClient</span><span class="tsd-signature-symbol">:</span> <a href="../types/ViemWalletClientLike.html" class="tsd-signature-type tsd-kind-type-alias">ViemWalletClientLike</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="" class="tsd-signature-type tsd-kind-class">RoboHost</a><span class="tsd-signature-symbol">&gt;</span><a href="#activate-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Complete 2FA activation for this host, flipping it from inactive to
+active. This is what makes a robo host usable, and it consumes the setup
+OTP.</p>
+<p>The natural next step once <a href="#waituntilonline" class="tsd-kind-method">waitUntilOnline</a> resolves. Signed by the
+owner, whose signed message must carry this host's OTP verbatim — so
+activation is a deliberate confirmation that the code the owner is looking
+at matches the one the host was provisioned with.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">walletClient</span>: <a href="../types/ViemWalletClientLike.html" class="tsd-signature-type tsd-kind-type-alias">ViemWalletClientLike</a></span>
+<div class="tsd-comment tsd-typography"><p>The owner's wallet, used to sign the activation</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="" class="tsd-signature-type tsd-kind-class">RoboHost</a><span class="tsd-signature-symbol">&gt;</span></h4><p>A fresh <a href="#" class="tsd-kind-class">RoboHost</a>, now active and with its OTP consumed</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws">Throws<a href="#throws" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="ValidationError.html" class="tsd-kind-class">ValidationError</a> if this host record carries no setup OTP
+(<code>otp</code> is <code>null</code>) — activation has already consumed it</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example">Example<a href="#example" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">onlineHost</span><span class="hl-1"> = </span><span class="hl-4">await</span><span class="hl-1"> </span><span class="hl-5">onlineHost</span><span class="hl-1">.</span><span class="hl-0">waitUntilOnline</span><span class="hl-1">();</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">activeHost</span><span class="hl-1"> = </span><span class="hl-4">await</span><span class="hl-1"> </span><span class="hl-5">activeHost</span><span class="hl-1">.</span><span class="hl-0">activate</span><span class="hl-1">(</span><span class="hl-5">wallet</span><span class="hl-1">);</span><br/><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-5">activeHost</span><span class="hl-1">.</span><span class="hl-5">active</span><span class="hl-1">); </span><span class="hl-3">// true</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="generatecloudformationurl"><span>generate<wbr/>Cloud<wbr/>Formation<wbr/>Url</span><a href="#generatecloudformationurl" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="generatecloudformationurl-1"><span class="tsd-kind-call-signature">generateCloudFormationUrl</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">params</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/RoboCloudFormationUrlParams.html" class="tsd-signature-type tsd-kind-type-alias">RoboCloudFormationUrlParams</a><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">&quot;otp&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><a href="#generatecloudformationurl-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Build an AWS CloudFormation quick-create console URL that provisions a
+robo host from Salt's launch template, pre-filled with the robo's setup
+OTP and the owner's public key. Opening it in a browser signed in to AWS
+launches the stack; the host then runs the same setup as <a href="#generatesetupscript" class="tsd-kind-method">generateSetupScript</a>.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">params</span>: <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/RoboCloudFormationUrlParams.html" class="tsd-signature-type tsd-kind-type-alias">RoboCloudFormationUrlParams</a><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">&quot;otp&quot;</span><span class="tsd-signature-symbol">&gt;</span></span>
+<div class="tsd-comment tsd-typography"><p>The owner's public key and stack name</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>The CloudFormation quick-create URL</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-1">Throws<a href="#throws-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="ValidationError.html" class="tsd-kind-class">ValidationError</a> if this host record carries no setup OTP
+(<code>otp</code> is <code>null</code>). Hosts returned by <a href="Salt.html#createrobohost" class="tsd-kind-method">Salt.createRoboHost</a> always
+carry it; hosts fetched with <a href="Salt.html#getrobohost" class="tsd-kind-method">Salt.getRoboHost</a> carry it until
+activation consumes it</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-1">Example<a href="#example-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">url</span><span class="hl-1"> = </span><span class="hl-5">host</span><span class="hl-1">.</span><span class="hl-0">generateCloudFormationUrl</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-5">publicKey:</span><span class="hl-1"> </span><span class="hl-5">ownerPublicKey</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">stackName:</span><span class="hl-1"> </span><span class="hl-2">&#39;my-org-robos&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">});</span><br/><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Open to launch: </span><span class="hl-6">${</span><span class="hl-5">url</span><span class="hl-6">}</span><span class="hl-2">`</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="generatesetupscript"><span>generate<wbr/>Setup<wbr/>Script</span><a href="#generatesetupscript" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="generatesetupscript-1"><span class="tsd-kind-call-signature">generateSetupScript</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">params</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/RoboSetupScriptParams.html" class="tsd-signature-type tsd-kind-type-alias">RoboSetupScriptParams</a><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">&quot;otp&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><a href="#generatesetupscript-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Build the <code>install-robos.sh</code> setup script for a self-hosted robo, targeting
+this instance's environment. Run as root on an Ubuntu/Debian host, the
+script installs Docker, generates a seed on the host, encrypts it to the
+owner's public key, uploads the encrypted backup to Salt, and starts the
+robo container with an automatic updater. The plaintext seed never leaves
+the host.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">params</span>: <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/RoboSetupScriptParams.html" class="tsd-signature-type tsd-kind-type-alias">RoboSetupScriptParams</a><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">&quot;otp&quot;</span><span class="tsd-signature-symbol">&gt;</span></span>
+<div class="tsd-comment tsd-typography"><p>The owner's public key</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>The setup script contents</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-2">Throws<a href="#throws-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="ValidationError.html" class="tsd-kind-class">ValidationError</a> if this host record carries no setup OTP
+(<code>otp</code> is <code>null</code>). Hosts returned by <a href="Salt.html#createrobohost" class="tsd-kind-method">Salt.createRoboHost</a> always
+carry it; hosts fetched with <a href="Salt.html#getrobohost" class="tsd-kind-method">Salt.getRoboHost</a> carry it until
+activation consumes it</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-2">Example<a href="#example-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">script</span><span class="hl-1"> = </span><span class="hl-5">host</span><span class="hl-1">.</span><span class="hl-0">generateSetupScript</span><span class="hl-1">({ </span><span class="hl-5">publicKey:</span><span class="hl-1"> </span><span class="hl-5">ownerPublicKey</span><span class="hl-1"> });</span><br/><span class="hl-5">fs</span><span class="hl-1">.</span><span class="hl-0">writeFileSync</span><span class="hl-1">(</span><span class="hl-2">&#39;install-robos.sh&#39;</span><span class="hl-1">, </span><span class="hl-5">script</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="listentosetup"><span>listen<wbr/>To<wbr/>Setup</span><a href="#listentosetup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="listentosetup-1"><span class="tsd-kind-call-signature">listenToSetup</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="RoboSetupListener.html" class="tsd-signature-type tsd-kind-class">RoboSetupListener</a><span class="tsd-signature-symbol">&gt;</span><a href="#listentosetup-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Start listening for this host's setup-progress updates. Connects the
+session's websocket if it is not already up, so there is no need to call
+<a href="Salt.html#connect" class="tsd-kind-method">Salt.connect</a> first.</p>
+<p>Progress is advisory — see <a href="RoboSetupListener.html" class="tsd-kind-class">RoboSetupListener</a>. Nothing it emits
+establishes that the host is ready; <a href="#waituntilonline" class="tsd-kind-method">waitUntilOnline</a> does that.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="RoboSetupListener.html" class="tsd-signature-type tsd-kind-class">RoboSetupListener</a><span class="tsd-signature-symbol">&gt;</span></h4><p>A listener that is already subscribed. Call
+<code>disableSetupListener()</code> when you are done listening.</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-3">Throws<a href="#throws-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="SocketError.html" class="tsd-kind-class">SocketError</a> if the socket cannot be opened</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-3">Example<a href="#example-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">setup</span><span class="hl-1"> = </span><span class="hl-4">await</span><span class="hl-1"> </span><span class="hl-5">host</span><span class="hl-1">.</span><span class="hl-0">listenToSetup</span><span class="hl-1">();</span><br/><span class="hl-5">setup</span><span class="hl-1">.</span><span class="hl-0">on</span><span class="hl-1">(</span><span class="hl-2">&#39;setupUpdate&#39;</span><span class="hl-1">, ({ </span><span class="hl-5">step</span><span class="hl-1">, </span><span class="hl-5">description</span><span class="hl-1"> }) </span><span class="hl-6">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`</span><span class="hl-6">${</span><span class="hl-5">step</span><span class="hl-6">}</span><span class="hl-2">: </span><span class="hl-6">${</span><span class="hl-5">description</span><span class="hl-6">}</span><span class="hl-2">`</span><span class="hl-1">);</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="waituntilonline"><span>wait<wbr/>Until<wbr/>Online</span><a href="#waituntilonline" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="waituntilonline-1"><span class="tsd-kind-call-signature">waitUntilOnline</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?:</span> <a href="../interfaces/WaitUntilOnlineOptions.html" class="tsd-signature-type tsd-kind-interface">WaitUntilOnlineOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="" class="tsd-signature-type tsd-kind-class">RoboHost</a><span class="tsd-signature-symbol">&gt;</span><a href="#waituntilonline-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Wait until every one of this host's robo guardians has connected to Salt,
+then return a freshly fetched host record.</p>
+<p>The only truthful measure that provisioning completed successfully.</p>
+<p><a href="#activate" class="tsd-kind-method">activate</a> is the owner's next step <em>after</em> this resolves.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">options</span>: <a href="../interfaces/WaitUntilOnlineOptions.html" class="tsd-signature-type tsd-kind-interface">WaitUntilOnlineOptions</a><span class="tsd-signature-symbol"> = {}</span></span>
+<div class="tsd-comment tsd-typography"><p>Timeout and poll interval; see
+<a href="../interfaces/WaitUntilOnlineOptions.html" class="tsd-kind-interface">WaitUntilOnlineOptions</a></p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="" class="tsd-signature-type tsd-kind-class">RoboHost</a><span class="tsd-signature-symbol">&gt;</span></h4><p>A fresh <a href="#" class="tsd-kind-class">RoboHost</a> whose signers are all online</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-4">Throws<a href="#throws-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="RoboHostTimeoutError.html" class="tsd-kind-class">RoboHostTimeoutError</a> if they are not all online in time.
+The error carries the last presence snapshot, which distinguishes &quot;the
+script never registered its signers&quot; from &quot;some guardians connected and
+others did not&quot;</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-4">Example<a href="#example-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">online</span><span class="hl-1"> = </span><span class="hl-4">await</span><span class="hl-1"> </span><span class="hl-5">host</span><span class="hl-1">.</span><span class="hl-0">waitUntilOnline</span><span class="hl-1">({ </span><span class="hl-5">timeoutMs:</span><span class="hl-1"> </span><span class="hl-9">20</span><span class="hl-1"> * </span><span class="hl-9">60_000</span><span class="hl-1"> });</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">active</span><span class="hl-1"> = </span><span class="hl-4">await</span><span class="hl-1"> </span><span class="hl-5">online</span><span class="hl-1">.</span><span class="hl-0">activate</span><span class="hl-1">(</span><span class="hl-5">wallet</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div></div></li></ul></section></section></details></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></div>
+<div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>On This Page</h3></summary>
+<div class="tsd-accordion-details">
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
+<div><a href="#active"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>active</span></a><a href="#id"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>id</span></a><a href="#name"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>name</span></a><a href="#organisationid"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>organisation<wbr/>Id</span></a><a href="#otp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>otp</span></a><a href="#owneraddress"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>owner<wbr/>Address</span></a><a href="#signers"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>signers</span></a><a href="#version"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>version</span></a></div></details>
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
+<div><a href="#activate"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>activate</span></a><a href="#generatecloudformationurl"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>generate<wbr/>Cloud<wbr/>Formation<wbr/>Url</span></a><a href="#generatesetupscript"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>generate<wbr/>Setup<wbr/>Script</span></a><a href="#listentosetup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>listen<wbr/>To<wbr/>Setup</span></a><a href="#waituntilonline"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>wait<wbr/>Until<wbr/>Online</span></a></div></details></div></details></div>
+<div class="site-menu">
+<nav id="tsd-sidebar-links" class="tsd-navigation"><a href="../documents/Getting_Started.html" class="tsd-nav-link">Getting started</a></nav>
+<nav class="tsd-navigation"><a href="../modules.html">salt-sdk</a>
+<ul class="tsd-small-nested-navigation" id="tsd-nav-container">
+<li>Loading...</li></ul></nav></div></div></div><footer>
+<p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>
+<div class="overlay"></div></body></html>
