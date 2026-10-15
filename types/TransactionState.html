@@ -1,5 +1,5 @@
-<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>PaymentOption | salt-sdk</title><meta name="description" content="Documentation for salt-sdk"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
-<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">salt-sdk</a>
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>TransactionState | @kagamidigital/salt-sdk-mirror</title><meta name="description" content="Documentation for @kagamidigital/salt-sdk-mirror"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">@kagamidigital/salt-sdk-mirror</a>
 <div id="tsd-toolbar-links"><a href="../documents/Getting_Started.html">Getting started</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
 <ul role="listbox" id="tsd-search-results"></ul>
 <div id="tsd-search-status" aria-live="polite" aria-atomic="true">
@@ -8,17 +8,12 @@
 <div class="col-content">
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb" aria-label="Breadcrumb">
-<li><a href="" aria-current="page">PaymentOption</a></li></ul>
-<h1>Type Alias PaymentOption</h1></div>
-<div class="tsd-signature"><span class="tsd-kind-type-alias">PaymentOption</span><span class="tsd-signature-symbol">:</span> <a href="PaymentTerms.html" class="tsd-signature-type tsd-kind-type-alias">PaymentTerms</a> <span class="tsd-signature-symbol">&amp;</span> <span class="tsd-signature-symbol">{</span> <span class="tsd-kind-property">source</span><span class="tsd-signature-symbol">:</span> <a href="PaymentOptionSource.html" class="tsd-signature-type tsd-kind-type-alias">PaymentOptionSource</a> <span class="tsd-signature-symbol">}</span></div>
-<div class="tsd-comment tsd-typography"><p>One way to pay: the readable terms, plus the exact requirement the backend
-quoted them from.</p>
-<p>The backend matches a payment by deep-equalling the requirement echoed back
-against the one it advertised, so it has to survive the trip to the signing
-step untouched. Pairing it with the terms it was narrowed from is what makes
-that automatic: filtering a quote's <a href="PaymentQuote.html#accepts" class="tsd-kind-property">PaymentQuote.accepts</a> does exactly
-what it looks like, and an option can be handed to another process — quoting,
-signing and spending are three jobs that need not share a machine.</p>
+<li><a href="" aria-current="page">TransactionState</a></li></ul>
+<h1>Type Alias TransactionState</h1></div>
+<div class="tsd-signature"><span class="tsd-kind-type-alias">TransactionState</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;propose&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;sign&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;broadcast&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;success&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;failure&quot;</span></div>
+<div class="tsd-comment tsd-typography"><p>The state of a transaction record as stored by Salt (see
+<a href="../interfaces/AccountTransaction.html#state" class="tsd-kind-property">AccountTransaction.state</a>). To follow a transaction you submitted,
+use the ceremony's <a href="TransactionStage.html" class="tsd-kind-type-alias">TransactionStage</a> instead.</p>
 </div></div>
 <div class="col-sidebar">
 <div class="page-menu">
@@ -33,7 +28,7 @@ signing and spending are three jobs that need not share a machine.</p>
 <div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div></div>
 <div class="site-menu">
 <nav id="tsd-sidebar-links" class="tsd-navigation"><a href="../documents/Getting_Started.html" class="tsd-nav-link">Getting started</a></nav>
-<nav class="tsd-navigation"><a href="../modules.html">salt-sdk</a>
+<nav class="tsd-navigation"><a href="../modules.html">@kagamidigital/salt-sdk-mirror</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">
 <li>Loading...</li></ul></nav></div></div></div><footer>
 <p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>

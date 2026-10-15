@@ -1,5 +1,5 @@
-<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>InvitationListener | salt-sdk</title><meta name="description" content="Documentation for salt-sdk"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
-<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">salt-sdk</a>
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>InvitationListener | @kagamidigital/salt-sdk-mirror</title><meta name="description" content="Documentation for @kagamidigital/salt-sdk-mirror"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">@kagamidigital/salt-sdk-mirror</a>
 <div id="tsd-toolbar-links"><a href="../documents/Getting_Started.html">Getting started</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
 <ul role="listbox" id="tsd-search-results"></ul>
 <div id="tsd-search-status" aria-live="polite" aria-atomic="true">
@@ -17,11 +17,11 @@ client learns of one as it happens instead of always polling with <a href="Salt.
 </div>
 <div class="tsd-comment tsd-typography">
 <div class="tsd-tag-example">
-<h4 class="tsd-anchor-link" id="example">Example<a href="#example" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">invitations</span><span class="hl-1"> = </span><span class="hl-4">await</span><span class="hl-1"> </span><span class="hl-5">salt</span><span class="hl-1">.</span><span class="hl-0">listenToOrganisationInvitations</span><span class="hl-1">();</span><br/><br/><span class="hl-5">invitations</span><span class="hl-1">.</span><span class="hl-0">on</span><span class="hl-1">(</span><span class="hl-2">&#39;invitationReceived&#39;</span><span class="hl-1">, </span><span class="hl-6">async</span><span class="hl-1"> (</span><span class="hl-5">invitation</span><span class="hl-1">) </span><span class="hl-6">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Invited to </span><span class="hl-6">${</span><span class="hl-5">invitation</span><span class="hl-10">.</span><span class="hl-5">organisation</span><span class="hl-10">.</span><span class="hl-5">name</span><span class="hl-6">}</span><span class="hl-2">`</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-4">await</span><span class="hl-1"> </span><span class="hl-5">salt</span><span class="hl-1">.</span><span class="hl-0">acceptOrganisationInvitation</span><span class="hl-1">(</span><span class="hl-5">invitation</span><span class="hl-1">.</span><span class="hl-5">id</span><span class="hl-1">);</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-3">// later</span><br/><span class="hl-5">invitations</span><span class="hl-1">.</span><span class="hl-0">disableInvitationListener</span><span class="hl-1">();</span>
+<h4 class="tsd-anchor-link" id="example">Example<a href="#example" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">invitations</span><span class="hl-1"> = </span><span class="hl-4">await</span><span class="hl-1"> </span><span class="hl-5">salt</span><span class="hl-1">.</span><span class="hl-0">listenToOrganisationInvitations</span><span class="hl-1">();</span><br/><br/><span class="hl-5">invitations</span><span class="hl-1">.</span><span class="hl-0">on</span><span class="hl-1">(</span><span class="hl-2">&#39;invitationReceived&#39;</span><span class="hl-1">, </span><span class="hl-6">async</span><span class="hl-1"> (</span><span class="hl-5">invitation</span><span class="hl-1">) </span><span class="hl-6">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-5">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Invited to </span><span class="hl-6">${</span><span class="hl-5">invitation</span><span class="hl-10">.</span><span class="hl-5">organisation</span><span class="hl-10">.</span><span class="hl-5">name</span><span class="hl-6">}</span><span class="hl-2">`</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-4">await</span><span class="hl-1"> </span><span class="hl-5">salt</span><span class="hl-1">.</span><span class="hl-0">acceptOrganisationInvitation</span><span class="hl-1">(</span><span class="hl-5">invitation</span><span class="hl-1">.</span><span class="hl-5">id</span><span class="hl-1">);</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-3">// later</span><br/><span class="hl-5">invitations</span><span class="hl-1">.</span><span class="hl-0">stop</span><span class="hl-1">();</span>
 </code><button type="button">Copy</button></pre>
 
 </div></div></section>
-<section class="tsd-panel tsd-hierarchy" data-refl="1130">
+<section class="tsd-panel tsd-hierarchy" data-refl="1447">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li class="tsd-hierarchy-item"><a href="https://github.com/primus/eventemitter3" class="tsd-signature-type external" target="_blank">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><a href="../types/InvitationListenerEvents.html" class="tsd-signature-type tsd-kind-type-alias">InvitationListenerEvents</a><span class="tsd-signature-symbol">&gt;</span>
@@ -39,9 +39,7 @@ client learns of one as it happens instead of always polling with <a href="Salt.
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading tsd-anchor-link" id="methods">Methods<a href="#methods" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-index-list"><a href="#addlistener" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Listener</span></a>
-<a href="#disableinvitationlistener" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>disable<wbr/>Invitation<wbr/>Listener</span></a>
 <a href="#emit" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>emit</span></a>
-<a href="#enableinvitationlistener" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>enable<wbr/>Invitation<wbr/>Listener</span></a>
 <a href="#eventnames" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>event<wbr/>Names</span></a>
 <a href="#listenercount" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>listener<wbr/>Count</span></a>
 <a href="#listeners" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>listeners</span></a>
@@ -50,6 +48,8 @@ client learns of one as it happens instead of always polling with <a href="Salt.
 <a href="#once" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>once</span></a>
 <a href="#removealllisteners" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a>
 <a href="#removelistener" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Listener</span></a>
+<a href="#start" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>start</span></a>
+<a href="#stop" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>stop</span></a>
 </div></section></div></details></section></section>
 <details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
 <h2 class="tsd-anchor-link" id="properties-1">Properties<a href="#properties-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
@@ -79,23 +79,6 @@ client learns of one as it happens instead of always polling with <a href="Salt.
 <li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">context</span>: <span class="tsd-signature-type">any</span></span></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4><aside class="tsd-sources">
 <p>Inherited from EventEmitter.addListener</p></aside></div></li></ul></section>
-<section class="tsd-panel tsd-member">
-<h3 class="tsd-anchor-link" id="disableinvitationlistener"><span>disable<wbr/>Invitation<wbr/>Listener</span><a href="#disableinvitationlistener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="">
-<div class="tsd-signature tsd-anchor-link" id="disableinvitationlistener-1"><span class="tsd-kind-call-signature">disableInvitationListener</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#disableinvitationlistener-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
-<div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Stop listening for invitations. Unsubscribes without closing the
-underlying websocket — call <a href="Salt.html#disconnect" class="tsd-kind-method">Salt.disconnect</a> to close the socket
-and allow the Node.js process to exit.</p>
-</div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-<div class="tsd-comment tsd-typography">
-<div class="tsd-tag-example">
-<h4 class="tsd-anchor-link" id="example-1">Example<a href="#example-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-5">invitations</span><span class="hl-1">.</span><span class="hl-0">disableInvitationListener</span><span class="hl-1">();</span><br/><span class="hl-5">salt</span><span class="hl-1">.</span><span class="hl-0">disconnect</span><span class="hl-1">();</span>
-</code><button type="button">Copy</button></pre>
-
-</div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="emit"><span>emit</span><a href="#emit" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -115,25 +98,6 @@ and allow the Node.js process to exit.</p>
 <li><span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">args</span>: <a href="https://github.com/primus/eventemitter3" class="tsd-signature-type external" target="_blank">ArgumentMap</a><span class="tsd-signature-symbol">&lt;</span><a href="../types/InvitationListenerEvents.html" class="tsd-signature-type tsd-kind-type-alias">InvitationListenerEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">Extract</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="NudgeListener.html#emitt">T</a><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-keyword">keyof</span> <a href="../types/InvitationListenerEvents.html" class="tsd-signature-type tsd-kind-type-alias">InvitationListenerEvents</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span></span></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
 <p>Inherited from EventEmitter.emit</p></aside></div></li></ul></section>
-<section class="tsd-panel tsd-member">
-<h3 class="tsd-anchor-link" id="enableinvitationlistener"><span>enable<wbr/>Invitation<wbr/>Listener</span><a href="#enableinvitationlistener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures">
-<li class="">
-<div class="tsd-signature tsd-anchor-link" id="enableinvitationlistener-1"><span class="tsd-kind-call-signature">enableInvitationListener</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#enableinvitationlistener-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
-<div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Subscribes to invitation events on the underlying socket. Called by
-<a href="Salt.html#listentoorganisationinvitations" class="tsd-kind-method">Salt.listenToOrganisationInvitations</a> after construction; you only
-need to call it again after a matching <a href="#disableinvitationlistener" class="tsd-kind-method">disableInvitationListener</a>
-to resume listening. Idempotent — calling while already enabled is a
-no-op.</p>
-</div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-<div class="tsd-comment tsd-typography">
-<div class="tsd-tag-example">
-<h4 class="tsd-anchor-link" id="example-2">Example<a href="#example-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-5">invitations</span><span class="hl-1">.</span><span class="hl-0">enableInvitationListener</span><span class="hl-1">();</span>
-</code><button type="button">Copy</button></pre>
-
-</div></div></div></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited">
 <h3 class="tsd-anchor-link" id="eventnames"><span>event<wbr/>Names</span><a href="#eventnames" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -270,7 +234,43 @@ listeners.</p>
 <li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">context</span>: <span class="tsd-signature-type">any</span></span></li>
 <li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">once</span>: <span class="tsd-signature-type">boolean</span></span></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4><aside class="tsd-sources">
-<p>Inherited from EventEmitter.removeListener</p></aside></div></li></ul></section></section></details></div>
+<p>Inherited from EventEmitter.removeListener</p></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="start"><span>start</span><a href="#start" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="start-1"><span class="tsd-kind-call-signature">start</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#start-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Subscribes to invitation events on the underlying socket. Called by
+<a href="Salt.html#listentoorganisationinvitations" class="tsd-kind-method">Salt.listenToOrganisationInvitations</a> after construction; you only
+need to call it again after a matching <a href="#stop" class="tsd-kind-method">stop</a>
+to resume listening. Idempotent — calling while already started is a
+no-op.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-1">Example<a href="#example-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-5">invitations</span><span class="hl-1">.</span><span class="hl-0">start</span><span class="hl-1">();</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="stop"><span>stop</span><a href="#stop" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="stop-1"><span class="tsd-kind-call-signature">stop</span><span class="tsd-signature-symbol">()</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#stop-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Stop listening for invitations. Unsubscribes without closing the
+underlying websocket — call <a href="Salt.html#disconnect" class="tsd-kind-method">Salt.disconnect</a> to close the socket
+and allow the Node.js process to exit.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-2">Example<a href="#example-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="ts"><span class="hl-5">invitations</span><span class="hl-1">.</span><span class="hl-0">stop</span><span class="hl-1">();</span><br/><span class="hl-5">salt</span><span class="hl-1">.</span><span class="hl-0">disconnect</span><span class="hl-1">();</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div></div></li></ul></section></section></details></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -288,10 +288,10 @@ listeners.</p>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
 <div><a href="#prefixed" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>prefixed</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
-<div><a href="#addlistener" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Listener</span></a><a href="#disableinvitationlistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>disable<wbr/>Invitation<wbr/>Listener</span></a><a href="#emit" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>emit</span></a><a href="#enableinvitationlistener"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>enable<wbr/>Invitation<wbr/>Listener</span></a><a href="#eventnames" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>event<wbr/>Names</span></a><a href="#listenercount" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>listener<wbr/>Count</span></a><a href="#listeners" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>listeners</span></a><a href="#off" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off</span></a><a href="#on" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on</span></a><a href="#once" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>once</span></a><a href="#removealllisteners" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a><a href="#removelistener" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Listener</span></a></div></details></div></details></div>
+<div><a href="#addlistener" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Listener</span></a><a href="#emit" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>emit</span></a><a href="#eventnames" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>event<wbr/>Names</span></a><a href="#listenercount" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>listener<wbr/>Count</span></a><a href="#listeners" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>listeners</span></a><a href="#off" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>off</span></a><a href="#on" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>on</span></a><a href="#once" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>once</span></a><a href="#removealllisteners" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a><a href="#removelistener" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>remove<wbr/>Listener</span></a><a href="#start"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>start</span></a><a href="#stop"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>stop</span></a></div></details></div></details></div>
 <div class="site-menu">
 <nav id="tsd-sidebar-links" class="tsd-navigation"><a href="../documents/Getting_Started.html" class="tsd-nav-link">Getting started</a></nav>
-<nav class="tsd-navigation"><a href="../modules.html">salt-sdk</a>
+<nav class="tsd-navigation"><a href="../modules.html">@kagamidigital/salt-sdk-mirror</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">
 <li>Loading...</li></ul></nav></div></div></div><footer>
 <p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>
